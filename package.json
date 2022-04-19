@@ -2,6 +2,7 @@
   "name": "globle",
   "version": "1.4.0",
   "private": true,
+  "homepage": "https://bomerasevic.github.io/globle-unlimited",
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.1",
     "@testing-library/jest-dom": "^5.16.1",
@@ -32,7 +33,9 @@
     "eject": "react-scripts eject",
     "ts": "tsc -w",
     "analyze": "source-map-explorer 'build/static/js/*.js'",
-    "style-check": "npx tailwindcss -i ./src/index.css -o ./dist/output.css --watch"
+    "style-check": "npx tailwindcss -i ./src/index.css -o ./dist/output.css --watch",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -57,6 +60,7 @@
     "@types/d3-scale-chromatic": "^3.0.0",
     "@types/react-transition-group": "^4.4.4",
     "autoprefixer": "^10.4.2",
+    "gh-pages": "^3.2.3",
     "postcss": "^8.4.5",
     "source-map-explorer": "^2.5.2",
     "tailwindcss": "^3.0.15"
