@@ -71,19 +71,11 @@ export default function Game({ reSpin, setShowStats, setScreen, setNewGame, newG
 
 
   useEffect(() => {
-    if (!inTheGame) {
-      storeGuesses({
-        day: today,
-        countries: [],
-      });
-    }
-    else {
-      const guessNames = guesses.map((country) => country.properties.NAME);
-      storeGuesses({
-        day: today,
-        countries: guessNames,
-      });
-    }
+    storeGuesses({
+      day: today,
+      countries: [],
+    });
+
   }, [inTheGame, guesses, storeGuesses])
 
 
